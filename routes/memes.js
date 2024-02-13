@@ -1,6 +1,5 @@
 const express = require('express');
 const memeGenerator = require('../utils/memeGenerator');
-
 const router = express.Router();
 
 // API endpoint for fetching memes
@@ -13,7 +12,7 @@ router.get('/', (req, res) => {
   // Your existing code to generate and return memes goes here
   const randomMeme = memeGenerator.generateRandomMeme();
 
-  res.json(randomMeme);
+  res.status(200).json(randomMeme);
 });
 
 module.exports = router;

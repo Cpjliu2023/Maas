@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { readDataFile, writeDataFile } = require('../middleware/authMiddleware');
 
-router.get('/balance', (req, res) => {
+router.get('/balance',(req, res) => {
   const authToken = req.headers['auth-token'];
   let clientData = readDataFile();
 
