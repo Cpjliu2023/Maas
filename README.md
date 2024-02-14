@@ -24,10 +24,9 @@ Endpoint: `GET /memes`
 - `query`: Free text query for meme relevance (optional)
 
 Example:
-```bash
+
 GET /memes?lat=40.730610&lon=-73.935242&query=food
 
-```
 This API call returns a meme relevant to the query 'food' in the specified location.
 
 **Token Authentication:**
@@ -52,18 +51,16 @@ Clients can purchase tokens to make API calls. The system tracks the number of A
    Endpoint: `GET /tokens/balance`
 
    Example:
-   ```bash
    GET /tokens/balance
-   ```
 
 This API call retrieves the current token balance for the authenticated client.
 
-# Token Authentication:
+## Token Authentication:
 
 Clients must include an auth-token in the request header.
 The token is authenticated to ensure valid access.
 
-Token Expiration:
+## Token Expiration:
 When the token balance is insufficient, the client receives a 403 error with an ACCESS_DENIED code.
 
 ## Token Management
